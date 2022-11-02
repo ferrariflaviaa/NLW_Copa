@@ -20,3 +20,5 @@ model Pool {
 
 //Para o prisma depois que criamos as tabelas no schema.prisma ou temos algumas alterações usamos o comando "npx prisma migrate dev" e assim que ele for rodado ele perdirar o nome da migrations, podemos dizer que ele commit do prisma.
 //Assim ele trasforma nosso código em sql.
+
+//O comando "npx prisma studio" onde podemos visualizar nosso banco.

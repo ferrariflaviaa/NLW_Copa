@@ -1,5 +1,10 @@
 import Fastify from "fastify";
+import { PrismaClient } from "@prisma/client"
 
+const prisma = new PrismaClient({
+  //Aqui podemos vê as querys em logs:
+  log: ['query'],
+})
 async function bootstrap() {
   const fastify = Fastify({
     //O fastify vai saltando os logs durante a nossa aplicação.
@@ -9,8 +14,10 @@ async function bootstrap() {
   //Criação de rotas:
 
   //Rota para os bolões:
-  fastify.get('/pools/count', () => {
-    return { count: 0 }
+  fastify.get('/pools/count', async() => {
+    const count = await prisma.pool.count()
+
+    return { count }
   })
 
   //A porta onde será a aplicação:
