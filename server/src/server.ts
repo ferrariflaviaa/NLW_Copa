@@ -28,7 +28,7 @@ async function bootstrap() {
   })
 
   //A porta onde será a aplicação:
-  await fastify.listen({ port: 3333, host: '0.0.0.0' })
+  await fastify.listen({ port: 3333, /*host: '0.0.0.0'*/ })
   //Host para funcioanar em mobile.
 }
 
