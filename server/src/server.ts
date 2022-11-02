@@ -8,7 +8,7 @@ async function bootstrap() {
 
   //Criação de rotas:
 
-    //Rota para os bolões:
+  //Rota para os bolões:
   fastify.get('/pools/count', () => {
     return { count: 0 }
   })
